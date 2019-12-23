@@ -10,8 +10,7 @@ Added beta-lactam resistance genotypes NDM-1,NDM-9,NDM-10,NDM-11,NDM-12,NDM-13,N
 Added multidrug resistance genotype qacEdelta1 
 tetracycline resistance genotypes tetK,tetX,tetX1,tetX2,tetX3,tetX4
 2. pipeline modification:
-remove usearch (users need to download usearch by themselves. the .udb file is generated from usearch bit32, if users have their own usearch bit64, a suitable udb can be generated follow two steps:firstly, retrieve fasta “usearch -udb2fasta db.udb -output db.fasta", secondly, generate udb "usearch -makeudb_ublast db.fasta -output db.udb".
-However, we are working in progress to replace usearch by minimap2 and diamond. A follow up update is coming soon after parameter optimization and validation.
+remove usearch (users need to download usearch 32 bit by themselves and move it into the folder "bin".)(if users have their own usearch bit64, a suitable SARG.2.2.udb and gg85.udb can be generated follow two steps:firstly, retrieve fasta “usearch_32bit -udb2fasta db.udb -output db.fasta", secondly, generate udb "usearch_64bit -makeudb_ublast db.fasta -output db.udb".)However, we are working in progress to replace usearch by minimap2 and diamond. A follow up update is coming soon after parameter optimization and validation.
 3. pipeline modification 2:
 The calculation is copy of ARGs divided by copies of 16S
 The copy of ARGs has been changed to Number-of-ARG- like-sequence  × Length-of-hit-length / Length-of-ARG-reference-sequence 
